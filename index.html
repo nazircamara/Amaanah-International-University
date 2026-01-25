@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جامعة الأمانة العالمية</title>
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo">
+            <div>
+                <h1 data-key="title" style="margin: 0;">جامعة الأمانة العالمية</h1>
+                <h3 data-key="subtitle" style="margin: 0; font-size: 1rem; font-weight: normal;">عمادة الدراسات العليا والبحث العلمي</h3>
+            </div>
+        </div>
+        <button id="langToggle" class="lang-btn">English</button>
+    </header>
+
+    <main>
+        <div class="card-grid">
+             <!-- Linking to Teacher Portal directly, auth handled in script if needed -->
+            <!-- If teacher-login.html exists, users can use it. Otherwise, we can link to portal which checks auth -->
+            <a href="teacher-login.html" class="card">
+                <div class="card-icon">📖</div>
+                <h2 data-key="teacherPortal">بوابة المحاضرين</h2>
+            </a>
+            <a href="student-login.html" class="card">
+                <div class="card-icon">📜</div>
+                <h2 data-key="studentPortal">بوابة الطلبة</h2>
+            </a>
+           
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #666; font-size: 0.9em;">
+        <div data-key="footerCopyright">&copy; 2026 جامعة الأمانة العالمية</div>
+        <div style="margin-top: 10px;">
+            <a href="tel:+2203983706" style="color: inherit; text-decoration: none; display: block;" dir="ltr">+2206207611</a>
+            <a href="mailto:amaanahiug@gmail.com" style="color: inherit; text-decoration: none; display: block;">graduatestudiesandscientificre@gmail.com</a>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

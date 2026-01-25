@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة المحاضرين | جامعة الأمانة العالمية</title>
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
+            <div>
+                <h1 data-key="title" style="margin: 0;">جامعة الأمانة العالمية</h1>
+                <h3 data-key="subtitle" style="margin: 0; font-size: 1rem; font-weight: normal;">عمادة الدراسات العليا والبحث العلمي</h3>
+            </div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+            <a href="index.html" data-key="home" style="color:white; text-decoration:none; font-weight:bold; margin-right: 15px;">الرئيسية</a>
+            <button id="logoutBtn" style="background:none; border:none; color:white; cursor:pointer; font-weight:bold;" data-key="logout">تسجيل الخروج</button>
+            <button id="langToggle" class="lang-btn">English</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 data-key="teacherPortal">بوابة المحاضرين</h2>
+            <br>
+            <form id="teacherForm">
+                <div class="form-group">
+                    <label><span data-key="studentId">رقم الطالب</span> <span style="color:red">*</span></label>
+                    <input type="number" id="t_studentId" required>
+                </div>
+                <div class="form-group">
+                    <label><span data-key="fileName">اسم ملف PDF</span> <span style="color:red">*</span></label>
+                    <input type="text" id="t_fileName" placeholder="file.pdf" required>
+                </div>
+                <button type="submit" class="btn-primary" data-key="linkDoc">ربط المستند</button>
+            </form>
+
+            <div id="msgBox" class="message-box"></div>
+            
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #666; font-size: 0.9em;">
+        <div data-key="footerCopyright">&copy; 2026 جامعة الأمانة العالمية</div>
+        <div style="margin-top: 10px;">
+            <a href="tel:+2203983706" style="color: inherit; text-decoration: none; display: block;" dir="ltr">+2206207611</a>
+            <a href="mailto:amaanahiug@gmail.com" style="color: inherit; text-decoration: none; display: block;">graduatestudiesandscientificre@gmail.com</a>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

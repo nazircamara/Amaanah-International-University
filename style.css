@@ -1,0 +1,244 @@
+:root {
+    --primary-green: #004d25;
+    --accent-gold: #D4AF37;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent-gold);
+}
+
+.logo-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.lang-btn {
+    background-color: var(--accent-gold);
+    color: var(--primary-green);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.lang-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
+    border-top: 5px solid var(--accent-gold);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #003319;
+}
+
+/* Cards (Home) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-green);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    border-color: var(--accent-gold);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Messaging */
+.message-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+.success-box {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--accent-gold);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] button#langToggle {
+    font-family: 'Cairo', sans-serif;
+}
+/* Responsive Adustments */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+        height: auto; /* Allow growth */
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        width: 100%; /* Ensure it takes full width to center text properly */
+    }
+
+    .logo-container h1 {
+        font-size: 1.1rem; /* Slightly smaller */
+        text-align: center;
+        line-height: 1.4;
+        white-space: normal; /* Force wrapping */
+        word-wrap: break-word; /* Legacy support */
+        overflow-wrap: break-word; /* Standard */
+        max-width: 100%; /* Prevent horizontal overflow */
+    }
+
+    .logo-container img {
+        height: 50px;
+        width: 50px;
+    }
+
+    /* Override RTL flex direction for mobile to keep vertical stack */
+    [dir="rtl"] header,
+    [dir="rtl"] .logo-container {
+        flex-direction: column;
+    }
+}
