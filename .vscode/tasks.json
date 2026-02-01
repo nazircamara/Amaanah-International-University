@@ -80,6 +80,22 @@
 			"isBackground": false,
 			"problemMatcher": [],
 			"group": "none"
+		},
+		{
+			"label": "Check Git Status Requests",
+			"type": "shell",
+			"command": "git status",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Push New Letter",
+			"type": "shell",
+			"command": "git add . && git commit -m \"Add new letter\" && git push",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
 		}
 	]
 }
