@@ -1,0 +1,85 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Push to GitHub",
+			"type": "shell",
+			"command": "cmd /c \"git merge --abort & git pull --no-edit origin main && git push\"",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Force Clean Git",
+			"type": "shell",
+			"command": "del .git\\MERGE_HEAD .git\\MERGE_MSG .git\\MERGE_MODE .git\\AUTO_MERGE .git\\.MERGE_MSG.swp",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Force Clean Git Bash",
+			"type": "shell",
+			"command": "rm -f .git/MERGE_HEAD .git/MERGE_MSG .git/MERGE_MODE .git/AUTO_MERGE .git/.MERGE_MSG.swp",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Git Pull and Push",
+			"type": "shell",
+			"command": "git pull --no-edit origin main && git push",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Check Git Status",
+			"type": "shell",
+			"command": "git status",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Commit Pull Push",
+			"type": "shell",
+			"command": "git commit -m \"Resolve changes before pull\" && git pull --no-edit origin main && git push",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Check Git Status Final",
+			"type": "shell",
+			"command": "git status",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Remove Script",
+			"type": "shell",
+			"command": "rm push_script.bat",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Check Status for Update",
+			"type": "shell",
+			"command": "git status",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Update and Push",
+			"type": "shell",
+			"command": "git add . && git commit -m \"Update project changes\" && git push",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		}
+	]
+}
